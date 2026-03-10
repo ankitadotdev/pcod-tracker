@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PCOD Period Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>🌸 PCOD Period Tracker</h1>
+
+  <label>Last Period Date</label>
+  <input type="date" id="lastPeriod">
+
+  <label>Cycle Length (days)</label>
+  <input type="number" id="cycleLength" min="20" max="45">
+
+  <label>Mood</label>
+  <div class="moods" id="moodButtons">
+    <button data-mood="Happy">😊 Happy</button>
+    <button data-mood="Low">😔 Low</button>
+    <button data-mood="Irritated">😡 Irritated</button>
+    <button data-mood="Tired">😴 Tired</button>
+  </div>
+
+  <label>Stress Level</label>
+  <input type="range" min="1" max="10" value="5" id="stress">
+  <p id="stressLabel">Stress: Medium (5)</p>
+
+  <button id="trackBtn">Track Cycle</button>
+
+  <div id="result"></div>
+
+  <h3>📜 History</h3>
+  <ul id="history"></ul>
+
+  <div class="calendar">
+    <h3 id="calendarHeader"></h3>
+    <div class="calendar-grid" id="calendarGrid"></div>
+  </div>
+
+  <p class="disclaimer">
+    Educational purpose only. Not medical advice.
+  </p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
